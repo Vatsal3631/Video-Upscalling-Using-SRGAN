@@ -1,0 +1,6 @@
+opencv-python
+matplotlib
+opencv-contrib-python
+tensorflow
+image-quality
+flask-share
