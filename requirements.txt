@@ -5,6 +5,6 @@ tensorflow
 image-quality
 flask-share
 Flask==1.1.2
-Jinja2==2.11.2
+Jinja2==2.11.3
 gunicorn==20.0.4
 Werkzeug==1.0.1
