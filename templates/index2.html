@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Image / Video Quality Enhancement using SRGAN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	{{ share.load() }}
+	<!----<link rel="stylesheet" href="/templates/style.css">--->
+	</head>
+	<body style="background-color:#BFECE5;">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5" style="background-color:teal ;padding:10px">
+					<a href={{ url_for('.home') }}><h2 class="heading-section" style="color:white;text-align:center;"><b>Image / Video Quality Enhancement using SRGAN</b></h2></a>
+				</div>
+			</div><br><br>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-md-7">
+								<div class="contact-wrap w-100 p-md-5 p-4" style="background-color:#ff5c33;">
+									<!--<h3 class="mb-4"><font color="white" size="6"><b>Upload Image / Video</b></font></h3>-->
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm" enctype="multipart/form-data">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name"><font color="white" size="3">FSRCNN</font></label><br>
+													<image src="{{url_for('static',filename = 'downloads/fsrcnn_image.jpg')}}" width="280" height="280"><br>
+												</div>
+												<center style="background-color:#004080;"><label><font color="#b3ff66"><b>{{prediction_text}} %</b></font></label></center>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name"><font color="white" size="3">SRGAN</font></label><br>
+													<image src="{{url_for('static',filename = 'downloads/srgan_image.jpg')}}" width="280" height="280">
+													<!--<label>{{prediction_text1}}</label>-->
+												</div>
+												<center style="background-color:#004080;"><label><font color="#b3ff66"><b>{{prediction_text1}} %</b></font></label></center>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<br><br>
+													<center><a href="{{ url_for('.download_video') }}"><input type="button" value="Download" class="btn btn-primary"></a></center>
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!--<img src='{{ prediction_text }}' height="350" width="450" alt="photo">-->
+							</div>
+							<div class="col-md-5 d-flex align-items-stretch">
+								<img src='{{ url_for("static", filename="Super Resolution.gif") }}' height="605" width="450"/>
+							</div>
+						</div>
+					</div>
+					<br><br><br>
+					<div class="row mb-5">
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center" style="background-color:#0052cc">
+			        			<span class="fa fa-map-marker"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Address:</span> <font color="#0052cc">S.No.124, Paud Road, Kothrud, Pune, Maharashtra 411038.</font></p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center" style="background-color:#0052cc">
+			        			<span class="fa fa-phone"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Phone:</span> <a href="tel://912025703400"><font color="#0052cc">+91 20257 - 03400</font></a></p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center" style="background-color:#0052cc">
+			        			<span class="fa fa-paper-plane"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Email:</span> <a href="mailto:vrtikiwala@gmail.com<"><font color="#0052cc">vrtikiwala@gmail.com</font></a></p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center" style="background-color:#0052cc">
+			        			<span class="fa fa-globe"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Website:</span> <a href="https://egg-production-prediction.herokuapp.com/"><font color="#0052cc">egg-production-prediction.herokuapp.com</font></a></p>
+				          </div>
+			          </div>
+							</div>
+						</div>
+				</div>
+				{{ share.create(title='Share on: ') }}
+			</div>
+		</div>
+	</section>
+
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.validate.min.js') }}"></script>
+  <!--<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>-->
+  
+	</body>
+</html>
+
