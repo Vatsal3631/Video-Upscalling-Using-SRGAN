@@ -1,5 +1,5 @@
 FROM python:3.7-slim
-MAINTANER Your Name "tikiwalavr@gmail.com"
+MAINTAINER Your Name "tikiwalavr@gmail.com"
 
 RUN apt-get update -y && \
     apt-get install -y python-pip python-dev
