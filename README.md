@@ -1,2 +1,2 @@
 # Video-Upscalling-Using-SRGAN
-Azure Deployment : https://video-upscalling-using-srgan-webapp.azurewebsites.net/
+Azure Deployment : https://video-upscalling-using-srgan.azurewebsites.net/
