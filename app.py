@@ -13,6 +13,8 @@ from tensorflow.keras.preprocessing.image import array_to_img
 from tensorflow.keras.preprocessing.image import save_img
 from flask_share import Share
 share = Share()
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = "2"
+port = int(os.environ.get("PORT", 5000))
 
 app = Flask(__name__) #Initialize the flask App
 share.init_app(app)
@@ -149,4 +151,4 @@ def download_video():
     return send_file(filename, as_attachment=True)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host = '0.0.0.0',port=port)
