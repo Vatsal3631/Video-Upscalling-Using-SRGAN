@@ -14,8 +14,6 @@ import tensorflow as tf
 from tensorflow.python.keras.layers import Add, BatchNormalization, Conv2D, Dense, Flatten, Input, LeakyReLU, PReLU, Lambda
 from tensorflow.python.keras.models import Model
 from utils import load_image, plot_sample
-from IPython import get_ipython
-#get_ipython().run_line_magic('cd', 'contact-form-03\\')
 #%cd Mini Project II/Final
 
 
